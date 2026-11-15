@@ -1,0 +1,134 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usepackage{graphicx}
+
+\title{Student Performance Analytics and Prediction}
+\subtitle{Data Analysis and Machine Learning Project}
+\author{Project Team}
+\institute{IIT Dharwad}
+\date{\today}
+
+\begin{document}
+
+% Slide 1: Title
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Slide 2: Problem
+\begin{frame}{Problem Statement}
+    Student marks and attendance contain useful information
+    about academic performance. Analyzing this information
+    manually can be time-consuming.
+
+    \vspace{0.5cm}
+    \textbf{Our solution:}
+    \begin{itemize}
+        \item Analyze student marks.
+        \item Visualize subject-wise performance.
+        \item Estimate average marks using machine learning.
+    \end{itemize}
+\end{frame}
+
+% Slide 3: Objectives
+\begin{frame}{Project Objectives}
+    \begin{itemize}
+        \item Validate and clean student data.
+        \item Calculate subject-wise average marks.
+        \item Identify overall student performance.
+        \item Generate graphs and visualizations.
+        \item Evaluate a linear regression prediction model.
+    \end{itemize}
+\end{frame}
+
+% Slide 4: Dataset
+\begin{frame}{Dataset}
+    Our CSV dataset contains:
+    \begin{itemize}
+        \item Student ID
+        \item Mathematics marks
+        \item Physics marks
+        \item Programming marks
+        \item Attendance percentage
+        \item Previous score
+    \end{itemize}
+\end{frame}
+
+% Slide 5: Methodology
+\begin{frame}{Methodology}
+    \begin{enumerate}
+        \item Collect student records in CSV format.
+        \item Validate the dataset.
+        \item Calculate statistics using Pandas.
+        \item Generate graphs using Matplotlib.
+        \item Train and evaluate a linear regression model.
+        \item Test and profile the program.
+    \end{enumerate}
+\end{frame}
+
+% Slide 6: Technologies
+\begin{frame}{Tools and Technologies}
+    \begin{itemize}
+        \item Python
+        \item Pandas
+        \item Matplotlib
+        \item Scikit-learn
+        \item Git and GitHub
+        \item Bash scripting
+        \item LaTeX and Beamer
+    \end{itemize}
+\end{frame}
+
+% Slide 7: Results
+\begin{frame}{Results}
+    \begin{itemize}
+        \item Subject-wise averages are calculated.
+        \item Student performance is visualized.
+        \item A prediction model estimates average marks.
+        \item Functional tests check data validity.
+    \end{itemize}
+
+    \vspace{0.3cm}
+    Add your actual graphs and model evaluation results
+    before the final presentation.
+\end{frame}
+
+% Slide 8: Conclusion
+\begin{frame}{Conclusion and Future Work}
+    \textbf{Conclusion}
+    \begin{itemize}
+        \item The system automates basic student performance analysis.
+        \item Graphs make the results easier to understand.
+    \end{itemize}
+
+    \textbf{Future Work}
+    \begin{itemize}
+        \item Use a larger real-world dataset.
+        \item Improve model evaluation.
+        \item Add a simple user interface.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Average Marks by Subject}
+    \centering
+    \includegraphics[width=0.85\textwidth]
+    {subject_averages.png}
+\end{frame}
+
+\begin{frame}{Distribution of Student Average Marks}
+    \centering
+    \includegraphics[width=0.85\textwidth]
+    {average_distribution.png}
+\end{frame}
+
+% Slide 9: Thank You
+\begin{frame}
+    \centering
+    \Huge Thank You!
+    
+    \vspace{0.5cm}
+    \large Questions?
+\end{frame}
+
+\end{document}
