@@ -1,95 +1,220 @@
 \documentclass[12pt,a4paper]{article}
 
+% Packages
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{setspace}
 
-\title{Student Performance Analytics and Prediction System}
-\author{Project Team}
-\date{\today}
+\graphicspath{{../}{../reports/}}
+
+\setstretch{1.15}
+\title{\textbf{Student Performance Analytics and Prediction System}}
+\author{
+CS25BT029 \\
+CS25BT042 \\
+CS25BT052 \\
+\\
+Indian Institute of Technology Dharwad
+}
+\date{November 16,2026}
 
 \begin{document}
 
 \maketitle
 
 \section{Introduction}
-This project analyzes student academic performance using
-Python, data analysis, visualization, and machine learning.
+
+Student marks and attendance provide useful information about
+academic performance. Analyzing this information manually can
+be time-consuming, especially when many student records are
+involved.
+
+The proposed system automates the analysis using Python libraries.
+It summarizes academic performance, visualizes the results,
+and provides an estimated average score using a machine learning
+model.
+
+\section{Problem Statement}
+
+This project presents a Student Performance Analytics and
+Prediction System developed using Python. Manual analysis of student performance can make it difficult
+to compare subjects, understand the distribution of marks,
+and estimate future academic performance efficiently.
+
+This project addresses the problem by developing a program
+that validates student records, calculates performance
+statistics, generates graphs, and estimates average marks
+using Linear Regression.
 
 \section{Objectives}
+
+The main objectives are:
+
 \begin{itemize}
-    \item Analyze student marks and attendance.
+    \item Validate and clean student performance data.
     \item Calculate subject-wise average marks.
-    \item Visualize the distribution of student performance.
-    \item Estimate average marks using previous scores and attendance.
-    \item Test the correctness of the program.
+    \item Calculate individual student average marks.
+    \item Identify overall academic performance and pass percentage.
+    \item Generate graphs to visualize the results.
+    \item Train and evaluate a Linear Regression prediction model.
+    \item Test the correctness and measure the execution performance
+    of the program.
 \end{itemize}
 
-\section{Dataset}
-The dataset contains student IDs, marks in Mathematics,
-Physics and Programming, attendance, and previous scores.
+\section{Dataset Description}
+
+The project uses a CSV dataset containing student records.
+The dataset includes the following attributes:
+
+\begin{itemize}
+    \item Student ID
+    \item Mathematics marks
+    \item Physics marks
+    \item Programming marks
+    \item Attendance percentage
+    \item Previous score
+\end{itemize}
 
 \section{Methodology}
-The system validates the dataset, calculates descriptive
-statistics, creates visualizations, and trains a
-linear regression model.
 
-\section{Results}
+The project follows these steps:
+
+\begin{enumerate}
+    \item \textbf{Data input:} Read student records from a CSV file
+    using Pandas.
+    
+    \item \textbf{Data validation:} Check required columns,
+    missing values, duplicate IDs, and valid ranges.
+    
+    \item \textbf{Statistical analysis:} Calculate subject-wise
+    averages, individual student averages, and pass percentage.
+    
+    \item \textbf{Visualization:} Generate a bar chart of
+    subject-wise average marks and a histogram of student
+    average marks using Matplotlib.
+    
+    \item \textbf{Prediction:} Use previous scores and attendance
+    as input features for a Linear Regression model.
+    
+    \item \textbf{Evaluation:} Evaluate the prediction model
+    using Mean Absolute Error (MAE).
+    
+    \item \textbf{Testing and profiling:} Run tests to check
+    data validation and calculations, and profile program
+    execution to understand its performance.
+\end{enumerate}
+
+\section{Tools and Technologies}
+
+\begin{itemize}
+    \item \textbf{Python:} programming language.
+    \item \textbf{Pandas:} Data loading and analysis.
+    \item \textbf{Matplotlib:} Graph and visualization.
+    \item \textbf{Scikit-learn:} Linear Regression and model evaluation.
+    \item \textbf{CSV:} Dataset  format.
+    \item \textbf{Git \& GitHub:} Version control and project sharing.
+    \item \textbf{Bash Scripting:} Automating project tasks
+    \item \textbf{LaTeX \& Beamer:} Report preparation.
+\end{itemize}
+
+\section{Results and Discussion}
 
 \subsection{Average Marks by Subject}
 
-The bar chart compares the average marks obtained
-in Mathematics, Physics, and Programming.
+The bar chart compares the average marks obtained in
+Mathematics, Physics, and Programming. It helps identify
+differences in average performance across the three subjects.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]
+    \includegraphics[width=0.75\textwidth]
     {subject_averages.png}
-    \caption{Average marks by subject}
+    \caption{Average Marks by Subject}
     \label{fig:subject-averages}
 \end{figure}
 
 \subsection{Distribution of Student Average Marks}
 
-The histogram illustrates how student average marks
-are distributed across different score ranges.
+The average mark of each student is calculated using the
+marks obtained in Mathematics, Physics, and Programming.
+The histogram shows how student average marks are distributed
+across different score ranges.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]
-    {average_distribution.png}
-    \caption{Distribution of student average marks}
+    \includegraphics[width=0.70\textwidth]
+    {avg_distribution.png}
+    \caption{Distribution of Student Average Marks}
     \label{fig:average-distribution}
-    
 \end{figure}
 
 \subsection{Prediction Model Evaluation}
 
 The Linear Regression model was evaluated using
-Mean Absolute Error (MAE). The model reported an MAE
-of 1.61 marks on the evaluation data.
+Mean Absolute Error.
+
+MAE measures the average absolute difference between
+predicted marks and actual marks.
 
 \subsection{Example Student Prediction}
 
-The model was provided with a previous score of 70
-and an attendance percentage of 85\%. It estimated
-the student's average marks to be 69.06 out of 100.
+For an example input with a previous score of 70 and an
+attendance percentage of 85, the model estimated the
+student's average marks as 69.06 out of 100.
 
-This prediction is an estimate and should not be
-considered a guaranteed academic result.
+This result is an estimate produced by the trained model.
+It is not a guaranteed academic result.
 
-\subsection{Subject-Wise Analysis}
+\subsection{Subject-Wise and Overall Analysis}
 
-The dataset was analyzed to calculate the average
-marks in Mathematics, Physics, and Programming.
-The subject-wise averages, class pass percentage,
-and graphs will be included after the analysis
-results have been recorded.
+The subject averages help compare performance across
+Mathematics, Physics, and Programming. The individual
+average marks and pass percentage provide additional
+information about overall class performance.
+
+Insert the exact subject averages, number of records,
+and pass percentage obtained from the program output
+when finalizing this report.
+
+\section{Testing and Profiling}
+
+The project includes tests for important data and calculation
+checks, such as:
+
+\begin{itemize}
+    \item Checking that the dataset contains student records.
+    \item Verifying the required dataset columns.
+    \item Checking for missing values and duplicate student IDs.
+    \item Validating the permitted numeric ranges.
+    \item Verifying student average calculations.
+\end{itemize}
+
+The program was also profiled to inspect execution time
+and function-level performance. Include specific timing
+measurements only if they have been recorded from the
+profiling output.
+
 
 \section{Conclusion}
-The project demonstrates how Python can be used to
-analyze and visualize student performance. Predictions
-are estimates and depend on the quality of the dataset.
+
+The Student Performance Analytics and Prediction System
+demonstrates how Python can be used to validate student
+data, calculate academic statistics, and visualize performance.
+The project also applies Linear Regression to estimate average
+marks using previous scores and attendance.
+
+Data validation, testing, and profiling contribute to the
+reliability and maintainability of the system. Although
+predictions can provide useful estimates, they should be
+interpreted with consideration of the dataset and model
+limitations.
+
+\vspace{2.5cm}
+\begin{center}
+    \Large{\textbf{Thank You!}}
+\end{center}
 
 \end{document}
