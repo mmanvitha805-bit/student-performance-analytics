@@ -17,65 +17,98 @@ CS25BT052 }
 
 \begin{document}
 
+% Slide 1: Title
 \begin{frame}
     \titlepage
 \end{frame}
 
-\begin{frame}{Problem Statement}
-    Student marks and attendance contain useful information
-    about academic performance. Analyzing this information
-    manually can be time-consuming.
+%slide 2:
+\begin{frame}{Problem Statement and Objectives}
 
-    \vspace{0.5cm}
-    \textbf{Our solution:}
-    \begin{itemize}
-        \item Import student records using csv files.
-        \item Analyze student marks and attendance systematically.
-        \item Visualize subject-wise performance and overall performance.
-        \item Predict average marks using Linear regression.
-        \item Generate statistics such as total marks,average marks,grades and pass percentage.
-    \end{itemize}
-\end{frame}
+\textbf{Problem Statement:}
 
-\begin{frame}{Project Objectives}
-    \begin{itemize}
-        \item Validate and clean student performance data.
+Student marks and attendance contain useful information about academic performance. Analyzing this information manually can be time-consuming.
+
+\vspace{0.3cm}
+
+\textbf{Project Objectives:}
+
+\begin{itemize}
+\item Validate and clean student performance data.
         \item Calculate subject-wise average marks.
         \item Identify overall student performance and pass percentage.
         \item Generate graphs to visualize performance trends and mark distributions.
         \item  Build and Evaluate a linear regression model to predict average marks.
-        \item test the correctness and reliability of the implemented system.
-    \end{itemize}
+        \item test the correctness and reliability of the implemented system
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}{Dataset}
-    Our CSV dataset contains:
-    \begin{itemize}
-        \item Student ID
-        \item Mathematics marks
-        \item Physics marks
-        \item Programming marks
-        \item Attendance percentage
-        \item Previous score
-    \end{itemize}
+%slide 3
+\begin{frame}{Dataset and Tools \& Technologies}
+
+\begin{columns}[T]
+
+\begin{column}{0.45\textwidth}
+\raggedright
+\textbf{Dataset:}
+
+Our CSV dataset contains:
+
+\begin{itemize}
+\item Student ID
+\item Mathematics marks
+\item Physics marks
+\item Programming marks
+\item Attendance percentage
+\item Previous score
+\end{itemize}
+
+\end{column}
+
+
+\begin{column}{0.52\textwidth}
+\raggedright
+\textbf{Tools and Technologies:}
+
+\begin{itemize}
+\item Python – Programming language
+\item Pandas – Data processing and analysis
+\item Matplotlib – Graphs and visualizations
+\item Scikit-learn – Linear regression
+\item CSV – Dataset format
+\item Git \& GitHub – Version control
+\item Bash – Automation
+\item LaTeX \& Beamer – Report and presentation
+\end{itemize}
+
+\end{column}
+
+\end{columns}
+
 \end{frame}
 
-\begin{frame}{Methodology}
+% Slide 4: Methodology
+
+\begin{frame}{Methodology and Workflow}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\raggedright
+\textbf{Methodology:}
     \begin{enumerate}
-        \item Collect student records in CSV format.
-        \item clean missing and duplicate values.
-        \item organise and prepare student records.
-        \item Calculate statistics using Pandas.
+        \item Collect student records in CSV.
+        \item clean missing \& duplicate values.
+        \item organise and prepare student records using Pandas.
         \item Generate graphs using Matplotlib.
         \item Train and evaluate a linear regression model.
         \item Test and profile the program.
-        \item Predict final examination marks.
+        \item Predict final exam marks.
     \end{enumerate}
-\end{frame}
-
-\begin{frame}{Workflow}
-
+\end{column}
+\begin{column}{0.48\textwidth}
 \centering
+
+
 \begin{tikzpicture}[
     node distance=0.45cm,
     process/.style={
@@ -94,7 +127,6 @@ CS25BT052 }
         blue!70
     }
 ]
-
 \node[process] (data) {CSV Dataset };
 \node[process, below=of data] (clean) { Data Validation and Cleaning};
 \node[process, below=of clean] (analysis) { Analyze Data};
@@ -109,22 +141,13 @@ CS25BT052 }
 \draw[arrow] (model) -- (result);
 
 \end{tikzpicture}
+\end{column}
 
+\end{columns}
 \end{frame}
 
-\begin{frame}{Tools and Technologies}
-    \begin{itemize}
-        \item Python - Programming language
-        \item Pandas - data processing and analysis
-        \item Matplotlib - Graphs and visualizations
-        \item Scikit-learn - Linear regression and model evaluation
-        \item CSV - dataset format
-        \item Git \& GitHub - version control and project hosting
-        \item Bash scripting - Automating project tasks
-        \item LaTeX \& Beamer - report and presentation 
-    \end{itemize}
-\end{frame}
 
+% Slide 5: Results
 \begin{frame}{Results}
     \begin{itemize}
         \item Successfully imported and processed student data.
@@ -137,34 +160,51 @@ CS25BT052 }
 
     \vspace{0.3cm}
 \end{frame}
-\begin{frame}{Average Marks by Subject}
-    \centering
-    \includegraphics[width=0.85\textwidth]
-    {subject_averages.png}
-\end{frame}
 
-\begin{frame}{Distribution of Student Average Marks}
-    \centering
-    \includegraphics[width=0.85\textwidth]
-    {avg_distribution.png}
-\end{frame}
+%slide 6
+\begin{frame}{Graphs and Conclusion}
 
-\begin{frame}{Conclusion}
-    \textbf{Conclusion}
-    \begin{itemize}
-        \item The system automates basic student performance analysis.
+\begin{columns}[T]
+
+% First Graph
+\begin{column}{0.48\textwidth}
+\centering
+\textbf{Average Marks by Subject}
+
+\includegraphics[width=\textwidth,height=3.5cm,keepaspectratio]{subject_averages.png}
+
+\end{column}
+
+% Second Graph
+\begin{column}{0.48\textwidth}
+\centering
+\textbf{Distribution of Student Average Marks}
+
+\includegraphics[width=\textwidth,height=3.5cm,keepaspectratio]{avg_distribution.png}
+
+\end{column}
+
+\end{columns}
+
+\vspace{0.3cm}
+
+\textbf{Conclusion}
+
+\begin{itemize}
+\item The system automates basic student performance analysis.
         \item Provides visual insights and estimated average marks.
         \item Graphs make the results easier to understand.
         \item Supports better data-driven decisions.
-    \end{itemize}
-\end{frame}
+\end{itemize}
+\vfill
+\begin{flushright}
+\textit{Thank You!}
+\end{flushright}
 
-\begin{frame}
-    \centering
-    \Huge Thank You!
-    
-    \vspace{0.5cm}
-    
 \end{frame}
+    
+
+
+
 
 \end{document}
